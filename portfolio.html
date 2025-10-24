@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | My Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    /* About Us Background Image */
+    .strategic-image {
+      height: 90vh;
+      background: url('strategic.jpg') no-repeat center center/cover;
+      background-size: contain;   /* <-- shows full image */
+      background-color: #000;     /* optional filler color around image */
+    }
+    .value-image {
+      margin-top: 20px;
+  height: 90vh;  /* same height as .about-image */
+  background: url('value-chain.jpg') no-repeat center center/cover;
+  background-size: contain;   /* <-- shows full image */
+      background-color: #000;  
+    }
+    .benchmark-image {
+      margin-top: 20px;
+  height: 90vh;  /* same height as .about-image */
+  background: url('benchmark.jpg') no-repeat center center/cover;
+  background-size: contain;   /* <-- shows full image */
+      background-color: #000;  
+    }
+    .benchmark-contd-image {
+      margin-top: 20px;
+  height: 90vh;  /* same height as .about-image */
+  background: url('benchmark_contd.jpg') no-repeat center center/cover;
+  background-size: contain;   /* <-- shows full image */
+      background-color: #000;  
+    }
+    .conclusion-image {
+      margin-top: 20px;
+  height: 90vh;  /* same height as .about-image */
+  background: url('conclusion.jpg') no-repeat center center/cover;
+  background-size: contain;   /* <-- shows full image */
+      background-color: #000;  
+    }
+
+
+    /* Responsive Menu */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #1e1e1e;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 200px;
+        text-align: right;
+        padding: 10px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      nav .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px;
+        transition: 0.3s;
+      }
+    }
+
+    @media (min-width: 769px) {
+      nav .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">MyWebsite</div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="strategic-image">
+  </section>
+  <section class="value-image"></section>
+  <section class="benchmark-image"></section>
+  <section class="benchmark-contd-image"></section>
+  <section class="conclusion-image"></section>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
